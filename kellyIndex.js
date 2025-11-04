@@ -21,9 +21,9 @@ const path = require('path');
 
 // --- Configuration ---
 // IMPORTANT: MOVE TO .env file before deployment!
-const DISCORD_BOT_TOKEN = 'MTMyNDM0MTMzMjIyMjgwMzk5OA.GPyo2O.ltb-RoaIyv5x80V68YkD8o7XD8eXNm6eOuXmJo'; // Actual Token - REMOVE FROM CODE
-const DISCORD_CLIENT_ID = '1324341332222803998'; // Actual Client ID - REMOVE FROM CODE
-const ALLOWED_CHANNEL_ID = '1323726879945130034'; // Actual Allowed Channel ID - Consider moving to .env
+const DISCORD_BOT_TOKEN = ''; // Actual Token - REMOVE FROM CODE
+const DISCORD_CLIENT_ID = ''; // Actual Client ID - REMOVE FROM CODE
+const ALLOWED_CHANNEL_ID = ''; // Actual Allowed Channel ID - Consider moving to .env
 const LOG_CHANNEL_ID = process.env.LOG_CHANNEL_ID || null; // Use null if not set
 
 const FAILED_PARSE_LOG_FILE = path.join(__dirname, 'failed_parses.log');
@@ -695,4 +695,5 @@ async function handleModalSubmit(interaction, user) {
          } catch (err) { await safeReply(interaction, { content: `❌ Error settling bet ${customIdParts[2]} partially: ${err.message}` }); }
          return;
     }
+
 } // end handleModalSubmit
